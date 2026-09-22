@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이마트 신촌점 K-Palette Zone | Official Campaign</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;800;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emart: {
+                            yellow: '#FFB800',
+                            yellowLight: '#FFF8E6',
+                            dark: '#121212',
+                            gray: '#2D2D2D',
+                            accent: '#FF4500'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', 'Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans KR', 'Poppins', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .yellow-gradient { background: linear-gradient(135deg, #FFC700 0%, #FF9900 100%); }
+        .dark-gradient { background: linear-gradient(135deg, #1E1E1E 0%, #0D0D0D 100%); }
+        .phone-mockup {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 12px #1f2937;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #FFB800; border-radius: 4px; }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="bg-emart-yellow text-black font-extrabold px-3 py-1 rounded-md text-xl tracking-tight">emart</span>
+                <span class="text-sm font-bold text-gray-900 border-l border-gray-300 pl-3">신촌점 K-Palette Zone</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-emart-yellow transition-colors">소개</a>
+                <a href="#video-shorts" class="hover:text-emart-yellow transition-colors">홍보 영상(Shorts)</a>
+                <a href="#solutions" class="hover:text-emart-yellow transition-colors">3대 솔루션</a>
+                <a href="#cardnews" class="hover:text-emart-yellow transition-colors">카드뉴스</a>
+                <a href="#channels" class="hover:text-emart-yellow transition-colors">채널 전략</a>
+                <a href="#checklist" class="hover:text-emart-yellow transition-colors">실행 체크리스트</a>
+            </div>
+            <a href="#location" class="bg-emart-yellow hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-full text-sm transition-transform active:scale-95 shadow-md flex items-center space-x-1">
+                <i class="fa-solid fa-location-dot text-xs"></i>
+                <span>오시는 길 (B3층)</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative overflow-hidden yellow-gradient pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-black">
+                    <div class="inline-flex items-center space-x-2 bg-black text-emart-yellow px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>e-mart Sinchon X K-Palette Zone Launch</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                        한국 여행 와서 뭐 살지 고민돼?<br>
+                        <span class="bg-black text-white px-2 py-1 rounded-lg inline-block mt-2">진짜 한국인의 REAL PICK!</span>
+                    </h1>
+                    <p class="text-base sm:text-lg font-medium text-gray-900 max-w-2xl leading-relaxed">
+                        이마트 신촌점 지하 3층 외국인 관광객 맞춤형 공간경험 온·오프라인 옴니채널 캠페인!
+                        복잡한 쇼핑, 언어 장벽, 정보 격차를 1초 만에 해결하세요.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <span class="bg-white/90 text-gray-900 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-lg shadow-sm border border-black/10 flex items-center">
+                            <i class="fa-solid fa-subway text-blue-600 mr-2"></i> 신촌역 2호선 지하 직결
+                        </span>
+                        <span class="bg-white/90 text-gray-900 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-lg shadow-sm border border-black/10 flex items-center">
+                            <i class="fa-solid fa-mobile-screen text-amber-600 mr-2"></i> 앱 설치 없는 AR 길안내
+                        </span>
+                        <span class="bg-white/90 text-gray-900 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-lg shadow-sm border border-black/10 flex items-center">
+                            <i class="fa-solid fa-wifi text-emerald-600 mr-2"></i> 1초 NFC 원터치 다국어
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Quick Stats Box -->
+                <div class="lg:col-span-5">
+                    <div class="bg-black/95 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-800 space-y-6">
+                        <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                            <div>
+                                <p class="text-xs text-gray-400">캠페인 작성일자</p>
+                                <p class="text-lg font-bold text-emart-yellow">2026. 09. 22</p>
+                            </div>
+                            <span class="bg-emart-yellow/20 text-emart-yellow text-xs px-3 py-1 rounded-full font-bold">공간경험 옴니채널</span>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider">핵심 전달 메시지</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start space-x-3 bg-gray-900/80 p-3 rounded-xl border border-gray-800">
+                                    <i class="fa-solid fa-circle-check text-emart-yellow mt-1"></i>
+                                    <p class="text-xs text-gray-200"><strong class="text-white">스마트한 쇼핑:</strong> AR 길안내 & NFC 다국어 원터치 지원</p>
+                                </div>
+                                <div class="flex items-start space-x-3 bg-gray-900/80 p-3 rounded-xl border border-gray-800">
+                                    <i class="fa-solid fa-circle-check text-emart-yellow mt-1"></i>
+                                    <p class="text-xs text-gray-200"><strong class="text-white">검증된 큐레이션:</strong> SNS 빅데이터 기반 TOP 100 & K-라면 꿀조합</p>
+                                </div>
+                                <div class="flex items-start space-x-3 bg-gray-900/80 p-3 rounded-xl border border-gray-800">
+                                    <i class="fa-solid fa-circle-check text-emart-yellow mt-1"></i>
+                                    <p class="text-xs text-gray-200"><strong class="text-white">원스톱 접근성:</strong> 공항철도/신촌역 direct 연결 및 공항 배송 연계</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="#video-shorts" class="w-full bg-emart-yellow hover:bg-yellow-400 text-black font-extrabold py-3 rounded-xl text-center block transition-all shadow-lg active:scale-98">
+                                <i class="fa-solid fa-circle-play mr-2"></i> 홍보 숏폼 영상 감상하기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9:16 Shorts Video Section (CRUCIAL REQUIREMENT) -->
+    <section id="video-shorts" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block bg-pink-600/30 text-pink-400 font-bold text-xs uppercase px-3 py-1 rounded-full mb-3 border border-pink-500/30">
+                    <i class="fa-brands fa-tiktok mr-1"></i> TikTok / YouTube Shorts / Reels
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    15~30초 현장 반응 바이럴 숏폼 영상
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2">
+                    첫 3초 "한국 마트 멘붕 해결법!" 영문 자막 탑재 및 AR 길찾기 실연 프리뷰 영상 (video.mp4)
+                </p>
+            </div>
+
+            <!-- Vertical 9:16 Frame Container -->
+            <div class="flex justify-center items-center">
+                <div class="relative w-full max-w-[340px] sm:max-w-[380px]">
+                    <!-- Phone frame wrapper -->
+                    <div class="phone-mockup rounded-[42px] bg-black p-3.5 border-4 border-gray-800 relative overflow-hidden">
+                        <!-- Phone Notch / Camera Hole -->
+                        <div class="absolute top-5 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-30 flex items-center justify-center">
+                            <div class="w-3 h-3 rounded-full bg-gray-900 border border-gray-700"></div>
+                        </div>
+
+                        <!-- 9:16 Aspect Video Display -->
+                        <div class="relative aspect-[9/16] rounded-[32px] overflow-hidden bg-gray-950 border border-gray-800">
+                            <!-- HTML5 Video Player -->
+                            <video 
+                                src="video.mp4" 
+                                controls 
+                                loop 
+                                muted 
+                                autoplay 
+                                playsinline 
+                                class="w-full h-full object-cover">
+                                <p class="text-xs text-gray-400 p-4">사용자의 브라우저가 video 태그를 지원하지 않거나 video.mp4 파일을 로드할 수 없습니다.</p>
+                            </video>
+
+                            <!-- Social Media Overlay UI Styling (Simulated TikTok/Shorts UI) -->
+                            <div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-4 z-20 bg-gradient-to-b from-black/40 via-transparent to-black/60">
+                                <!-- Top Bar -->
+                                <div class="flex justify-between items-center text-xs font-semibold pt-4 px-2">
+                                    <span class="bg-black/40 backdrop-blur-md text-white px-2.5 py-1 rounded-full border border-white/20">
+                                        <i class="fa-solid fa-eye text-emart-yellow mr-1"></i> LIVE Preview
+                                    </span>
+                                    <span class="text-white drop-shadow">#KPaletteZone</span>
+                                </div>
+
+                                <!-- Right Side Engagement Buttons -->
+                                <div class="self-end space-y-4 text-center pointer-events-auto">
+                                    <div class="flex flex-col items-center">
+                                        <button class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white hover:text-red-500 transition-colors">
+                                            <i class="fa-solid fa-heart text-lg"></i>
+                                        </button>
+                                        <span class="text-[10px] text-white font-semibold mt-1">12.8K</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <button class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white hover:text-yellow-400 transition-colors">
+                                            <i class="fa-solid fa-bookmark text-lg"></i>
+                                        </button>
+                                        <span class="text-[10px] text-white font-semibold mt-1">5.4K</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <button class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white hover:text-blue-400 transition-colors">
+                                            <i class="fa-solid fa-share text-lg"></i>
+                                        </button>
+                                        <span class="text-[10px] text-white font-semibold mt-1">Share</span>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Caption Overlay -->
+                                <div class="space-y-1 text-left pb-2 px-1 pointer-events-auto">
+                                    <p class="text-xs font-bold text-emart-yellow">@emart_sinchon_official</p>
+                                    <p class="text-xs text-white line-clamp-2 leading-snug">
+                                        한국 마트 오면 멘붕 오는 사람? 😱 이마트 신촌점 K-Palette Zone에서 AR 길안내 & 꿀조합 1초 해결!
+                                    </p>
+                                    <div class="flex items-center text-[10px] text-gray-300 space-x-1 pt-1">
+                                        <i class="fa-solid fa-music text-xs"></i>
+                                        <span class="truncate">K-Palette Zone Official Sound - Sinchon Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Core Solutions Section -->
+    <section id="solutions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emart-yellow bg-black px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3">
+                    3대 페인포인트 극복을 위한 혁신 솔루션
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-2">
+                    외국인 관광객이 겪는 매장 내 길잃음, 언어장벽, 정보격차를 원스톱으로 해결합니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Solution 01 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-emart-yellow hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emart-yellow/20 text-emart-yellow group-hover:bg-emart-yellow group-hover:text-black transition-colors flex items-center justify-center text-2xl font-black mb-6">
+                            01
+                        </div>
+                        <div class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Solution 01: AR 길찾기</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">직관적 바닥 유도선 & 스마트폰 AR 내비게이션</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            이마트24 Yellow 유도선과 앱 설치가 필요 없는 웹 기반 AR 길찾기로 지하 3층 K-Palette Zone까지 논스톱 안내.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200 flex items-center text-xs font-bold text-gray-800">
+                        <i class="fa-solid fa-mobile-button text-emart-yellow text-lg mr-2"></i>
+                        <span>"별도 앱 다운로드 필요 없이 바로 접속!"</span>
+                    </div>
+                </div>
+
+                <!-- Solution 02 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-emart-yellow hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emart-yellow/20 text-emart-yellow group-hover:bg-emart-yellow group-hover:text-black transition-colors flex items-center justify-center text-2xl font-black mb-6">
+                            02
+                        </div>
+                        <div class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Solution 02: SNS 핫템</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">실시간 Top 100 & K-라면 꿀조합 큐레이션</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            틱톡, 샤오홍슈 빅데이터 기반 '한국인 찐추천 TOP 100'. 불닭+짜파게티 등 실패 없는 조합을 컨트롤 매대에서 한 번에 구매.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200 flex items-center text-xs font-bold text-gray-800">
+                        <i class="fa-solid fa-fire text-red-500 text-lg mr-2"></i>
+                        <span>"실패 없는 한국인 인정 리얼 맛도리 총집합"</span>
+                    </div>
+                </div>
+
+                <!-- Solution 03 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-emart-yellow hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emart-yellow/20 text-emart-yellow group-hover:bg-emart-yellow group-hover:text-black transition-colors flex items-center justify-center text-2xl font-black mb-6">
+                            03
+                        </div>
+                        <div class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Solution 03: NFC 정보</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">1초 NFC 원터치 다국어 정보 서비스</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            매대에 스마트폰을 태그하면 1초 만에 맵기 단계, 성분, 할랄/비건 여부 및 15초 숏폼 조리 레시피가 모국어로 자동 디스플레이.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200 flex items-center text-xs font-bold text-gray-800">
+                        <i class="fa-solid fa-language text-blue-500 text-lg mr-2"></i>
+                        <span>"번역기 필요 없는 모국어 자동 변환"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Card News Gallery / Interactive Carousel Section -->
+    <section id="cardnews" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-emart-yellow font-bold text-xs uppercase tracking-widest">Instagram Campaign</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">인스타그램 카드뉴스 6종 플랜</h2>
+                    <p class="text-gray-400 text-sm mt-2">스토리텔링 순서에 맞춘 카드뉴스 상세 내용 및 가이드</p>
+                </div>
+                <!-- Controls -->
+                <div class="flex space-x-2 mt-4 md:mt-0">
+                    <button onclick="prevCard()" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-emart-yellow hover:text-black flex items-center justify-center transition-colors">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextCard()" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-emart-yellow hover:text-black flex items-center justify-center transition-colors">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card News Grid / Carousel Display -->
+            <div id="cardnews-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 01 -->
+                <div class="card-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emart-yellow text-black text-xs font-extrabold px-2.5 py-1 rounded">Card 01</span>
+                            <span class="text-xs text-gray-400">공감 혹</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">한국 여행 와서 뭐 살지 고민돼?</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            질문형 메시지로 타깃의 호기심을 자극하고 진짜 한국인이 사랑하는 리얼 픽 K-Palette Zone 인지도 각인.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-4 border-t border-gray-700/50 flex items-center justify-between text-xs text-emart-yellow font-medium">
+                        <span>#이마트신촌 #KoreaTravel</span>
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="card-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emart-yellow text-black text-xs font-extrabold px-2.5 py-1 rounded">Card 02</span>
+                            <span class="text-xs text-gray-400">문제 제시</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">한국 마트만 오면 멘붕 오는 사람?</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            넓은 매장에서 길 잃음, 한국어 패키지의 답답함, SNS 핫템 찾기 어려움 등 외국인 관광객의 3대 페인포인트 공감대 형성.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-4 border-t border-gray-700/50 flex items-center justify-between text-xs text-emart-yellow font-medium">
+                        <span>#ShoppingPainPoints</span>
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="card-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emart-yellow text-black text-xs font-extrabold px-2.5 py-1 rounded">Card 03</span>
+                            <span class="text-xs text-gray-400">솔루션 1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">바닥 안내선 & AR 길찾기</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            이마트24 Yellow 바닥 유도선과 앱 설치 없는 웹 AR 내비게이션으로 지하 3층 매장까지 헤맴 없이 원스톱 안내.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-4 border-t border-gray-700/50 flex items-center justify-between text-xs text-emart-yellow font-medium">
+                        <span>#ARPathfinding</span>
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="card-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emart-yellow text-black text-xs font-extrabold px-2.5 py-1 rounded">Card 04</span>
+                            <span class="text-xs text-gray-400">솔루션 2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">SNS 핫템 & K-라면 꿀조합</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            샤오홍슈·틱톡 빅데이터 기반 실시간 TOP 100 큐레이션 및 실패 없는 라면 조합(불닭+짜파게티) 한 번에 겟!
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-4 border-t border-gray-700/50 flex items-center justify-between text-xs text-emart-yellow font-medium">
+                        <span>#KFoodRecipe</span>
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Card 05 -->
+                <div class="card-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emart-yellow text-black text-xs font-extrabold px-2.5 py-1 rounded">Card 05</span>
+                            <span class="text-xs text-gray-400">솔루션 3</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">NFC 원터치 정보 서비스</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            매대 1초 Tap으로 맵기/성분/할랄/비건 정보 및 15초 조리 숏폼 레시피 모국어 자동 디스플레이 시연.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-4 border-t border-gray-700/50 flex items-center justify-between text-xs text-emart-yellow font-medium">
+                        <span>#NFCMultilingual</span>
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Card 06 -->
+                <div class="card-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emart-yellow text-black text-xs font-extrabold px-2.5 py-1 rounded">Card 06</span>
+                            <span class="text-xs text-gray-400">위치 안내</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">어디서 만날 수 있냐고? 이마트 신촌점 B3!</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            신촌역 2호선 지하 직결 동선 및 공항 배송(Airport Delivery) 연계 서비스 최종 CTA 안내.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-4 border-t border-gray-700/50 flex items-center justify-between text-xs text-emart-yellow font-medium">
+                        <span>#SinchonB3</span>
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Execution Timeline Checklist & KPI Dashboard -->
+    <section id="checklist" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- KPI Metrics Counters -->
+            <div class="mb-20">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="bg-black text-emart-yellow text-xs font-bold px-3 py-1 rounded-full uppercase">Target KPIs</span>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mt-2">캠페인 정량 KPI 목표</h2>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 text-center shadow-sm">
+                        <p class="text-xs text-gray-500 font-medium">오픈 전 (PRE)</p>
+                        <p class="text-2xl font-black text-emart-yellow mt-1">500건+</p>
+                        <p class="text-[11px] text-gray-600 mt-1">카드뉴스 저장수</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 text-center shadow-sm">
+                        <p class="text-xs text-gray-500 font-medium">오픈 전 (PRE)</p>
+                        <p class="text-2xl font-black text-gray-900 mt-1">10,000회+</p>
+                        <p class="text-[11px] text-gray-600 mt-1">TikTok 조회수</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 text-center shadow-sm">
+                        <p class="text-xs text-gray-500 font-medium">오픈 당일 (D-DAY)</p>
+                        <p class="text-2xl font-black text-emart-yellow mt-1">20,000명+</p>
+                        <p class="text-[11px] text-gray-600 mt-1">인스타그램 총 도달</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 text-center shadow-sm">
+                        <p class="text-xs text-gray-500 font-medium">오픈 당일 (D-DAY)</p>
+                        <p class="text-2xl font-black text-gray-900 mt-1">5,000회+</p>
+                        <p class="text-[11px] text-gray-600 mt-1">샤오홍슈 총 노출</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 text-center shadow-sm">
+                        <p class="text-xs text-gray-500 font-medium">D+7 (POST)</p>
+                        <p class="text-2xl font-black text-emart-yellow mt-1">50건+</p>
+                        <p class="text-[11px] text-gray-600 mt-1">고객 자발 UGC</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 text-center shadow-sm">
+                        <p class="text-xs text-gray-500 font-medium">D+30 (POST)</p>
+                        <p class="text-2xl font-black text-gray-900 mt-1">200건+</p>
+                        <p class="text-[11px] text-gray-600 mt-1">누적 해시태그</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Timeline Checklist Tabs -->
+            <div>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 border-b border-gray-200 pb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">단계별 실행 체크리스트</h2>
+                        <p class="text-xs text-gray-500 mt-1">D-14 사전 준비부터 오픈 당일 및 D+30 지속 부스팅 계획</p>
+                    </div>
+                    <div class="flex space-x-2 mt-4 sm:mt-0 bg-gray-200 p-1 rounded-xl text-xs font-bold">
+                        <button onclick="switchTab('pre')" id="tab-pre" class="px-4 py-2 rounded-lg bg-white text-black shadow-sm transition-all">Pre-Launch (오픈 전)</button>
+                        <button onclick="switchTab('dday')" id="tab-dday" class="px-4 py-2 rounded-lg text-gray-600 hover:text-black transition-all">D-Day (오픈 당일)</button>
+                        <button onclick="switchTab('post')" id="tab-post" class="px-4 py-2 rounded-lg text-gray-600 hover:text-black transition-all">Post-Launch (오픈 후)</button>
+                    </div>
+                </div>
+
+                <!-- Tab 1: Pre-Launch -->
+                <div id="content-pre" class="tab-content space-y-4">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                        <div class="text-xs font-bold text-amber-600">D-14 ~ D-8 | 사전 준비 & 콘텐츠 제작/검수</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-700">
+                            <label class="flex items-center space-x-2"><input type="checkbox" checked class="rounded text-emart-yellow"> <span>카드뉴스 6장 최종 감수 (영문 표기/할인 혜택 무결성)</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" checked class="rounded text-emart-yellow"> <span>홍보 영상(mp4) TikTok 9:16 최적 규격 편집</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" checked class="rounded text-emart-yellow"> <span>다국어 자막 스크립트 번역 감수 (영/중간/중번/일)</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" checked class="rounded text-emart-yellow"> <span>글로벌 여행 인플루언서(KOL) 5인 섭외 완료</span></label>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                        <div class="text-xs font-bold text-amber-600">D-7 ~ D-2 | 티저 공개 & 버즈업 확산</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-700">
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>D-7: TikTok 티저 영상 공개 ("한국 마트 길 잃어버리는 사람 주목!")</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>D-7~D-4: 인스타그램 카드뉴스 (1)~(4) 순차 업로드</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>D-5: 샤오홍슈 중국어 후기체 티징 포스팅</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>D-3: 카카오 공식채널 티징 메시지 발송</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: D-Day -->
+                <div id="content-dday" class="tab-content hidden space-y-4">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                        <div class="text-xs font-bold text-amber-600">오전 09:00 ~ 12:00 | 공식 오픈 선언 & 전 채널 런칭</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-700">
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>09:00: 인스타그램 카드뉴스 (6) 및 오프닝 릴스 게시</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>09:30: 카카오채널 오픈 메시지 발송 (쿠폰 연계)</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>10:00: 샤오홍슈 현장 라이브 피드 업로드</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>10:30: 현장 NFC/AR 시스템 최초 유입 모니터링</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Post-Launch -->
+                <div id="content-post" class="tab-content hidden space-y-4">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3">
+                        <div class="text-xs font-bold text-amber-600">D+1 ~ D+30 | 상시 운영 체계 & 지속 부스팅</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-700">
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>#KPaletteZone UGC 모니터링 및 공식 스토리 리그램</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>고효율 영상 대상 Spark Ads / Meta Ads 유료 부스팅</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>격주 '실시간 SNS 인기 Top 10' 카드뉴스 정기 발행</span></label>
+                            <label class="flex items-center space-x-2"><input type="checkbox" class="rounded text-emart-yellow"> <span>구글 지도/트립어드바이저 리뷰 및 평점 관리</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Channel Mix & Location Map Section -->
+    <section id="channels" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Channel Mix Showcase -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-emart-yellow bg-black px-3 py-1 rounded-full uppercase">Omni-Channel Strategy</span>
+                    <h2 class="text-3xl font-extrabold text-gray-900">5대 소셜 미디어 플랫폼 믹스</h2>
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 flex items-start space-x-3">
+                            <i class="fa-brands fa-tiktok text-pink-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">TikTok (바이럴 확산)</h4>
+                                <p class="text-gray-600">15~30초 현장 반응 숏폼 (mp4 활용), 영문 자막 탑재 및 주 2~3회 업로드</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 flex items-start space-x-3">
+                            <i class="fa-brands fa-instagram text-purple-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Instagram (브랜딩 & 인게이지먼트)</h4>
+                                <p class="text-gray-600">공식 6장 카드뉴스 캐러셀 + Reels 현장 클립, 저장(Save) 유도 이벤트</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 flex items-start space-x-3">
+                            <i class="fa-solid fa-book text-red-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">샤오홍슈 小红书 (중화권 타깃)</h4>
+                                <p class="text-gray-600">카드뉴스 기반 상세 쇼핑 가이드, 현지 네이티브 검수 완료 중문 배포</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 flex items-start space-x-3">
+                            <i class="fa-brands fa-youtube text-red-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">YouTube Shorts (글로벌 검색 유입)</h4>
+                                <p class="text-gray-600">AR 길찾기 & 꿀조합 60초 시연, 설명란 구글맵 링크 고정</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location & Access Info Box -->
+                <div id="location" class="lg:col-span-6 bg-gray-900 text-white rounded-3xl p-8 shadow-xl">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-emart-yellow text-black flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-bold">이마트 신촌점 B3 K-Palette Zone</h3>
+                            <p class="text-xs text-gray-400">서울특별시 마포구 신촌로 B3 Level</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 text-xs sm:text-sm text-gray-300">
+                        <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-subway text-green-400 text-xl"></i>
+                                <span>지하철 2호선 신촌역 B3 직결 연결통로</span>
+                            </div>
+                            <span class="text-emart-yellow font-bold text-xs">도보 0분</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-plane text-blue-400 text-xl"></i>
+                                <span>공항철도 연계 & 외국인 즉시 세금 환급</span>
+                            </div>
+                            <span class="text-emart-yellow font-bold text-xs">즉시 환급</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-luggage-cart text-amber-400 text-xl"></i>
+                                <span>공항 배송 (Airport Delivery) 서비스</span>
+                            </div>
+                            <span class="text-emart-yellow font-bold text-xs">연계 완료</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-800 text-center">
+                        <p class="text-xs text-gray-400 mb-3">공식 네이버 지도 / 카카오맵에서 위치 확인</p>
+                        <button onclick="alert('신촌역 2호선 지하 직결통로를 통해 B3층으로 바로 입장하실 수 있습니다.')" class="w-full bg-emart-yellow hover:bg-yellow-400 text-black font-extrabold py-3 rounded-xl transition-all shadow-md">
+                            지하철 직결 동선 지도 보기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="bg-emart-yellow text-black font-black px-2 py-0.5 rounded">emart</span>
+                <span class="text-white font-bold text-sm">신촌점 K-Palette Zone</span>
+            </div>
+            <p class="max-w-xl mx-auto text-gray-500">
+                이마트 신촌점 외국인 관광객 맞춤형 공간경험 온·오프라인 옴니채널 캠페인 기획서 1부 기반 웹 랜딩 페이지
+            </p>
+            <p class="text-gray-600">© 2026 emart Sinchon K-Palette Zone. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching logic for execution checklist
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('[id^="tab-"]').forEach(el => {
+                el.classList.remove('bg-white', 'text-black', 'shadow-sm');
+                el.classList.add('text-gray-600');
+            });
+
+            document.getElementById('content-' + tab).classList.remove('hidden');
+            const activeBtn = document.getElementById('tab-' + tab);
+            activeBtn.classList.add('bg-white', 'text-black', 'shadow-sm');
+            activeBtn.classList.remove('text-gray-600');
+        }
+
+        // Simple carousel horizontal scroll for Card News
+        function prevCard() {
+            const container = document.getElementById('cardnews-container');
+            container.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+        function nextCard() {
+            const container = document.getElementById('cardnews-container');
+            container.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
