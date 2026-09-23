@@ -49,11 +49,16 @@
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <span class="bg-emart-yellow text-black font-extrabold px-3 py-1 rounded-md text-xl tracking-tight">emart</span>
+            <a href="#" class="flex items-center space-x-3 group">
+                <span class="bg-emart-yellow text-black font-extrabold px-3 py-1 rounded-md text-xl tracking-tight group-hover:bg-yellow-400 transition-colors">emart</span>
                 <span class="text-sm font-bold text-gray-900 border-l border-gray-300 pl-3">신촌점 K-Palette Zone</span>
-            </div>
+            </a>
             <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-emart-yellow text-gray-900 font-bold transition-colors">메인홈</a>
+                <a href="./01/web1.html" class="bg-emart-yellowLight text-amber-700 hover:bg-emart-yellow hover:text-black px-3 py-1 rounded-md font-bold transition-all flex items-center space-x-1">
+                    <i class="fa-solid fa-clipboard-list text-xs"></i>
+                    <span>설문조사</span>
+                </a>
                 <a href="#about" class="hover:text-emart-yellow transition-colors">소개</a>
                 <a href="#video-shorts" class="hover:text-emart-yellow transition-colors">홍보 영상(Shorts)</a>
                 <a href="#solutions" class="hover:text-emart-yellow transition-colors">3대 솔루션</a>
@@ -137,7 +142,7 @@
         </div>
     </section>
 
-    <!-- 9:16 Shorts Video Section (CRUCIAL REQUIREMENT) -->
+    <!-- 9:16 Shorts Video Section -->
     <section id="video-shorts" class="py-20 bg-slate-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -176,7 +181,7 @@
                                 <p class="text-xs text-gray-400 p-4">사용자의 브라우저가 video 태그를 지원하지 않거나 video.mp4 파일을 로드할 수 없습니다.</p>
                             </video>
 
-                            <!-- Social Media Overlay UI Styling (Simulated TikTok/Shorts UI) -->
+                            <!-- Social Media Overlay UI Styling -->
                             <div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-4 z-20 bg-gradient-to-b from-black/40 via-transparent to-black/60">
                                 <!-- Top Bar -->
                                 <div class="flex justify-between items-center text-xs font-semibold pt-4 px-2">
