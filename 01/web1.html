@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이마트 신촌점 K-Palette Zone 사전 수요조사</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Noto Sans KR & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- QRCode.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emart: {
+                            yellow: '#FFC20E',
+                            darkYellow: '#E5A800',
+                            navy: '#1E293B',
+                            accent: '#FF4757'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 min-h-screen flex flex-col bg-grid-pattern">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="../index.html" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-200 transition-colors" title="메인 홈으로 이동">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">홈</span>
+                </a>
+                <div class="bg-emart-yellow p-2 rounded-xl font-bold text-slate-900 flex items-center justify-center w-10 h-10 shadow-sm">
+                    <i class="fa-solid fa-store text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-emart-darkYellow uppercase tracking-wider block">emart Sinchon</span>
+                    <h1 class="text-lg font-bold text-slate-900 leading-tight">K-Palette Zone Survey Portal</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="../index.html" class="hidden md:inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-3.5 py-2 rounded-xl shadow-sm transition-all">
+                    <i class="fa-solid fa-house text-xs"></i>
+                    <span>메인 홈으로</span>
+                </a>
+                <div class="hidden sm:flex items-center space-x-2 text-xs text-slate-500 font-medium bg-slate-100 px-3 py-2 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>설문 조사 진행 중</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FFC20E_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10 space-y-4">
+            <span class="inline-flex items-center gap-1.5 bg-emart-yellow/20 text-emart-yellow text-xs font-bold px-3 py-1 rounded-full border border-emart-yellow/30">
+                <i class="fa-solid fa-sparkles text-xs"></i> 고객 의견 수집 (Customer Survey)
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                이마트 신촌점 <span class="text-emart-yellow">K-Palette Zone</span> 사전 수요조사
+            </h2>
+            <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
+                고객님의 소중한 의견을 바탕으로 더욱 특별하고 다채로운 K-쇼핑 공간을 만들어가고자 합니다.<br class="hidden sm:inline">
+                해당되는 카드를 클릭하여 설문에 참여해 주세요. (새 창에서 구글 폼으로 이동합니다)
+            </p>
+            
+            <!-- Category Filter Buttons -->
+            <div class="pt-4 flex flex-wrap justify-center gap-2" id="filter-container">
+                <button onclick="filterCards('all')" class="filter-btn active px-4 py-1.5 rounded-full text-xs font-medium bg-emart-yellow text-slate-900 shadow-md transition-all">전체 보기</button>
+                <button onclick="filterCards('multilingual')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-700 hover:bg-slate-600 text-slate-200 transition-all">🌐 다국어 (Multilingual)</button>
+                <button onclick="filterCards('prelaunch')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-700 hover:bg-slate-600 text-slate-200 transition-all">✨ 사전 런칭 (Pre-Launch)</button>
+                <button onclick="filterCards('travel')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-700 hover:bg-slate-600 text-slate-200 transition-all">✈️ 한국 여행 & 식품</button>
+                <button onclick="filterCards('sinchon')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-slate-700 hover:bg-slate-600 text-slate-200 transition-all">🛒 이마트 신촌점</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="survey-grid">
+
+            <!-- Card 1 -->
+            <div class="survey-card multilingual sinchon bg-white rounded-2xl border border-slate-200 p-6 shadow-sm card-hover flex flex-col justify-between relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-indigo-600"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+                                <i class="fa-solid fa-globe mr-1"></i> Multilingual
+                            </span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-yellow-50 text-yellow-800 border border-yellow-200">
+                                이마트 신촌점
+                            </span>
+                        </div>
+                        <span class="text-xs text-slate-400 font-medium flex items-center">
+                            <i class="fa-regular fa-clock mr-1"></i> 약 2분 소요
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        이마트 신촌점 K-Palette Zone 사전 수요조사
+                        <span class="text-slate-500 text-sm font-medium block mt-1">(Multilingual Survey)</span>
+                    </h3>
+
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        글로벌 고객 및 다국어 지원이 필요한 방문객을 위한 맞춤형 사전 수요조사입니다. 다양한 언어로 편리하게 응답하실 수 있습니다.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <button onclick="openQrModal('이마트 신촌점 K-Palette Zone 사전 수요조사 (Multilingual)', 'https://docs.google.com/forms/d/e/1FAIpQLSftfpLwlLCdN11m513ZM2xdNgmMHeJnDs3HXTnhxM_7eDEb9w/viewform')" class="text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-100 transition-colors" title="QR 코드로 모바일 참여">
+                        <i class="fa-solid fa-qrcode text-lg"></i>
+                    </button>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSftfpLwlLCdN11m513ZM2xdNgmMHeJnDs3HXTnhxM_7eDEb9w/viewform" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all group-hover:translate-x-0.5">
+                        <span>설문 참여하기</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="survey-card prelaunch bg-white rounded-2xl border border-slate-200 p-6 shadow-sm card-hover flex flex-col justify-between relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-purple-500 to-pink-500"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">
+                                <i class="fa-solid fa-rocket mr-1"></i> Pre-Launch
+                            </span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
+                                신규 프로젝트
+                            </span>
+                        </div>
+                        <span class="text-xs text-slate-400 font-medium flex items-center">
+                            <i class="fa-regular fa-clock mr-1"></i> 약 3분 소요
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+                        [K-Palette Zone] 사전 수요조사
+                        <span class="text-slate-500 text-sm font-medium block mt-1">(Pre-Launch Survey)</span>
+                    </h3>
+
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        새롭게 준비 중인 K-Palette Zone의 전반적인 컨셉과 서비스에 대한 선호도를 조사하여 더 완벽한 런칭을 준비합니다.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <button onclick="openQrModal('[K-Palette Zone] 사전 수요조사 (Pre-Launch)', 'https://docs.google.com/forms/d/e/1FAIpQLScxolG0so7GQPpUXDdVRcF12WFmhGMJfTmw1kxnWUkPSVh9OA/viewform')" class="text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-100 transition-colors" title="QR 코드로 모바일 참여">
+                        <i class="fa-solid fa-qrcode text-lg"></i>
+                    </button>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScxolG0so7GQPpUXDdVRcF12WFmhGMJfTmw1kxnWUkPSVh9OA/viewform" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-purple-600 hover:bg-purple-700 shadow-md hover:shadow-lg transition-all group-hover:translate-x-0.5">
+                        <span>설문 참여하기</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="survey-card travel bg-white rounded-2xl border border-slate-200 p-6 shadow-sm card-hover flex flex-col justify-between relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-emerald-500 to-teal-600"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                                <i class="fa-solid fa-plane mr-1"></i> Travel & Food
+                            </span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200">
+                                쇼핑 경험
+                            </span>
+                        </div>
+                        <span class="text-xs text-slate-400 font-medium flex items-center">
+                            <i class="fa-regular fa-clock mr-1"></i> 약 3분 소요
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                        한국 여행 중 식품 쇼핑 경험 및 K-Palette Zone 이용 의향 조사
+                    </h3>
+
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        한국을 방문하거나 여행하는 동안 느낀 식품 쇼핑 경험과 K-Palette Zone 이용에 대한 의견을 나누어 주세요.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <button onclick="openQrModal('한국 여행 중 식품 쇼핑 경험 및 K-Palette Zone 이용 의향 조사', 'https://docs.google.com/forms/d/e/1FAIpQLScIz-9QbbEn2XmZyxlevXNNWDhPsq52K5mQkHLZ2NajY8rQuQ/viewform')" class="text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-100 transition-colors" title="QR 코드로 모바일 참여">
+                        <i class="fa-solid fa-qrcode text-lg"></i>
+                    </button>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScIz-9QbbEn2XmZyxlevXNNWDhPsq52K5mQkHLZ2NajY8rQuQ/viewform" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md hover:shadow-lg transition-all group-hover:translate-x-0.5">
+                        <span>설문 참여하기</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="survey-card sinchon bg-white rounded-2xl border border-slate-200 p-6 shadow-sm card-hover flex flex-col justify-between relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-amber-500 to-emart-yellow"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+                                <i class="fa-solid fa-shop mr-1"></i> 이마트 신촌점
+                            </span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-orange-50 text-orange-700 border border-orange-200">
+                                지역 고객
+                            </span>
+                        </div>
+                        <span class="text-xs text-slate-400 font-medium flex items-center">
+                            <i class="fa-regular fa-clock mr-1"></i> 약 2분 소요
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                        [이마트 신촌점] K-Palette Zone 사전 수요조사
+                    </h3>
+
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        이마트 신촌점을 방문하시는 주 고객층 및 신촌 매장 특화 K-Palette Zone 구성을 위한 세부 의견 조사입니다.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <button onclick="openQrModal('[이마트 신촌점] K-Palette Zone 사전 수요조사', 'https://docs.google.com/forms/d/e/1FAIpQLSe8BQZNIrFY2qbNb3gQlCK_t0XHSl1qva1QkAl1AonViCqr7w/viewform')" class="text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-100 transition-colors" title="QR 코드로 모바일 참여">
+                        <i class="fa-solid fa-qrcode text-lg"></i>
+                    </button>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8BQZNIrFY2qbNb3gQlCK_t0XHSl1qva1QkAl1AonViCqr7w/viewform" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-900 bg-emart-yellow hover:bg-emart-darkYellow shadow-md hover:shadow-lg transition-all group-hover:translate-x-0.5">
+                        <span>설문 참여하기</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- QR Code Modal -->
+    <div id="qr-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden transition-opacity duration-200 opacity-0">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl relative transform transition-all scale-95" id="modal-content">
+            <button onclick="closeQrModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-full hover:bg-slate-100">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-emart-yellow/20 text-emart-darkYellow rounded-full mb-3">
+                <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+            </div>
+            <h4 id="qr-modal-title" class="text-base font-bold text-slate-900 mb-1 px-2"></h4>
+            <p class="text-xs text-slate-500 mb-4">스마트폰 카메라로 QR 코드를 스캔하세요</p>
+            
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 inline-block mb-4">
+                <div id="qrcode" class="flex justify-center"></div>
+            </div>
+
+            <div>
+                <a id="qr-direct-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-2.5 rounded-xl text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 transition-colors">
+                    이 기기에서 계속 진행하기
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-1.5"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-400 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-semibold text-slate-500">이마트 신촌점 K-Palette Zone 고객 사전 수요조사 포털</p>
+            <p>© emart Inc. All rights reserved. 본 설문조사는 Google Forms를 통해 안전하게 진행됩니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter logic
+        function filterCards(category) {
+            const cards = document.querySelectorAll('.survey-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-emart-yellow', 'text-slate-900', 'shadow-md');
+                btn.classList.add('bg-slate-700', 'text-slate-200');
+            });
+
+            event.currentTarget.classList.remove('bg-slate-700', 'text-slate-200');
+            event.currentTarget.classList.add('bg-emart-yellow', 'text-slate-900', 'shadow-md');
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // QR Modal Logic
+        let qrcodeObj = null;
+
+        function openQrModal(title, url) {
+            const modal = document.getElementById('qr-modal');
+            const modalContent = document.getElementById('modal-content');
+            const titleElem = document.getElementById('qr-modal-title');
+            const directLink = document.getElementById('qr-direct-link');
+            const qrContainer = document.getElementById('qrcode');
+
+            titleElem.textContent = title;
+            directLink.href = url;
+
+            // Clear previous QR code
+            qrContainer.innerHTML = '';
+
+            // Generate new QR code
+            qrcodeObj = new QRCode(qrContainer, {
+                text: url,
+                width: 160,
+                height: 160,
+                colorDark: "#0f172a",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeQrModal() {
+            const modal = document.getElementById('qr-modal');
+            const modalContent = document.getElementById('modal-content');
+
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        // Close modal on backdrop click
+        document.getElementById('qr-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeQrModal();
+            }
+        });
+    </script>
+</body>
+</html>
